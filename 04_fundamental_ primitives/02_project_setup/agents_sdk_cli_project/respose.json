@@ -1,0 +1,32 @@
+// List docs resource
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "resources": [
+            {
+                "name": "list_docs",
+                "uri": "docs://documents",
+                "description": "",
+                "mimeType": "application/json"
+            }
+        ]
+    }
+}
+
+
+
+// Get doc resource template
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "resourceTemplates": [
+            {
+                "name": "get_doc",
+                "uriTemplate": "docs://{doc_id}",
+                "description": ""
+            }
+        ]
+    }
+}

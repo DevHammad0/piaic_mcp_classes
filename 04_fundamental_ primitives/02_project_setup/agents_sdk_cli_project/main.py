@@ -10,7 +10,7 @@ from core.agent_service import AgentService
 from core.cli_chat import CliChat
 from core.cli import CliApp
 
-load_dotenv(find_dotenv(filename=".env"))
+load_dotenv()
 
 # Agent Config
 llm_model = os.getenv("LLM_MODEL", "")
