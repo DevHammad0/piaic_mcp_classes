@@ -30,3 +30,64 @@
         ]
     }
 }
+
+
+
+
+
+
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "prompts": [
+            {
+                "name": "format",
+                "description": "Rewrites the contents of the document in Markdown format.",
+                "arguments": [
+                    {
+                        "name": "doc_id",
+                        "description": "Id of the document to format",
+                        "required": true
+                    }
+                ]
+            },
+            {
+                "name": "summarize",
+                "description": "summarizes the contents of the document.",
+                "arguments": [
+                    {
+                        "name": "doc_id",
+                        "description": "Id of the document to summarize",
+                        "required": true
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+
+
+
+
+
+
+
+{
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+        "description": "Rewrites the contents of the document in Markdown format.",
+        "messages": [
+            {
+                "role": "user",
+                "content": {
+                    "type": "text",
+                    "text": "\n    Your goal is to reformat a document to be written with markdown syntax.\n\n    The id of the document you need to reformat is:\n    <document_id>\n    report.pdf\n    </document_id>\n\n    Add in headers, bullet points, tables, etc as necessary. Feel free to add in extra text, but don't change the meaning of the report.\n    Use the 'edit_document' tool to edit the document. After the document has been edited, respond with the final version of the doc. Don't explain your changes.\n    "
+                }
+            }
+        ]
+    }
+}
