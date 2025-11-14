@@ -32,9 +32,9 @@ async def main():
     try:
         async with streamablehttp_client(server_url) as (read_stream, write_stream, get_session_id):
             async with ClientSession(read_stream, write_stream, logging_callback=log_handler) as session:
-                print("✅ Connected. Initializing session...")
-                await session.initialize()
-                print("🛠️ Session initialized.")
+                # print("✅ Connected. Initializing session...")
+                # await session.initialize()
+                # print("🛠️ Session initialized.")
 
                 print("\nSCENARIO 1: Successful processing")
                 print("-" * 40)
@@ -42,7 +42,7 @@ async def main():
                 if result.content:
                     print(f"✅ Result: {result.content[0].text}")
 
-                await asyncio.sleep(1)
+                # await asyncio.sleep(1)
 
                 print("\nSCENARIO 2: Processing with failure")
                 print("-" * 40)
